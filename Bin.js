@@ -8,15 +8,15 @@ class Bin{
         this.width = width;
         this.height = height;
 
-        this.body = Bodies.rectangle(this.x, this,y, this.width, this.height, options);
+        this.body = Bodies.rectangle(this.x, this.y, this.width, this.height, options);
         World.add(world, this.body);
     }
 
     display(){
-        var pos = this.body.pos;
+        var pos = this.body.position;
 
         push();
-        translate(this.x, this.y);
+        translate(pos.x, pos.y);
         rectMode(CENTER);
         fill("silver");
         rect(0, 0, this.width, this.height);
